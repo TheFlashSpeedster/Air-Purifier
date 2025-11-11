@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Purifier Simulation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Air Purifier Filtration System</h1>
+            <p class="subtitle">Watch how pollutants are filtered through each stage</p>
+        </header>
+
+        <div class="controls">
+            <button id="startBtn" class="btn btn-primary">Start Simulation</button>
+            <button id="resetBtn" class="btn btn-secondary">Reset</button>
+            <div class="speed-control">
+                <label for="speedSlider">Speed:</label>
+                <input type="range" id="speedSlider" min="0.5" max="3" step="0.5" value="2">
+                <span id="speedValue">1x</span>
+            </div>
+        </div>
+
+        <div class="purifier-container">
+            <!-- Air Input Section -->
+            <div class="section input-section">
+                <div class="section-label">Dirty Air Input</div>
+                <div class="particle-container" id="inputParticles"></div>
+            </div>
+
+            <!-- Pre-Filter -->
+            <div class="filter-section" id="preFilter">
+                <div class="filter-label">Pre-Filter</div>
+                <div class="filter-box">
+                    <div class="filter-mesh"></div>
+                    <div class="particle-container" id="preFilterParticles"></div>
+                    <div class="filtered-particles" id="preFiltered"></div>
+                </div>
+                <div class="filter-info">
+                    <div class="captured">Captured: <span id="preCaptured">0</span></div>
+                    <div class="filter-type">Large particles, dust, hair</div>
+                </div>
+            </div>
+
+            <!-- HEPA Filter -->
+            <div class="filter-section" id="hepaFilter">
+                <div class="filter-label">HEPA Filter</div>
+                <div class="filter-box">
+                    <div class="filter-mesh hepa-mesh"></div>
+                    <div class="particle-container" id="hepaFilterParticles"></div>
+                    <div class="filtered-particles" id="hepaFiltered"></div>
+                </div>
+                <div class="filter-info">
+                    <div class="captured">Captured: <span id="hepaCaptured">0</span></div>
+                    <div class="filter-type">PM2.5, allergens, fine dust</div>
+                </div>
+            </div>
+
+            <!-- Carbon Filter -->
+            <div class="filter-section" id="carbonFilter">
+                <div class="filter-label">Activated Carbon</div>
+                <div class="filter-box">
+                    <div class="filter-mesh carbon-mesh"></div>
+                    <div class="particle-container" id="carbonFilterParticles"></div>
+                    <div class="filtered-particles" id="carbonFiltered"></div>
+                </div>
+                <div class="filter-info">
+                    <div class="captured">Captured: <span id="carbonCaptured">0</span></div>
+                    <div class="filter-type">Odors, VOCs, chemicals</div>
+                </div>
+            </div>
+
+            <!-- UV Light -->
+            <div class="filter-section" id="uvFilter">
+                <div class="filter-label">UV-C Light</div>
+                <div class="filter-box">
+                    <div class="uv-light" id="uvLight"></div>
+                    <div class="particle-container" id="uvFilterParticles"></div>
+                    <div class="filtered-particles" id="uvFiltered"></div>
+                </div>
+                <div class="filter-info">
+                    <div class="captured">Neutralized: <span id="uvCaptured">0</span></div>
+                    <div class="filter-type">Bacteria, viruses, mold spores</div>
+                </div>
+            </div>
+
+            <!-- Clean Air Output -->
+            <div class="section output-section">
+                <div class="section-label">Clean Air Output</div>
+                <div class="particle-container" id="outputParticles"></div>
+                <div class="air-quality">
+                    <div class="quality-meter">
+                        <div class="quality-label">Air Quality</div>
+                        <div class="quality-bar">
+                            <div class="quality-fill" id="qualityFill"></div>
+                        </div>
+                        <div class="quality-value" id="qualityValue">0%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="legend">
+            <h3>Particle Types & Pollutants</h3>
+            <div class="legend-items">
+                <div class="legend-item">
+                    <span class="particle dust"></span>
+                    <div class="particle-label">Dust Particles</div>
+                    <div class="particle-description">Large particles, hair, and debris filtered by Pre-Filter</div>
+                </div>
+                <div class="legend-item">
+                    <span class="particle pm25"></span>
+                    <div class="particle-label">PM2.5</div>
+                    <div class="particle-description">Fine particulate matter (≤2.5μm) captured by HEPA Filter</div>
+                </div>
+                <div class="legend-item">
+                    <span class="particle bacteria"></span>
+                    <div class="particle-label">Bacteria & Viruses</div>
+                    <div class="particle-description">Microorganisms neutralized by UV-C Light</div>
+                </div>
+                <div class="legend-item">
+                    <span class="particle voc"></span>
+                    <div class="particle-label">VOCs</div>
+                    <div class="particle-description">Volatile Organic Compounds removed by Activated Carbon</div>
+                </div>
+                <div class="legend-item">
+                    <span class="particle clean"></span>
+                    <div class="particle-label">Clean Air</div>
+                    <div class="particle-description">Purified air particles after all filtration stages</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="simulation.js"></script>
+</body>
+</html>
+
