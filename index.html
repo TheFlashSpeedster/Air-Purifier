@@ -33,7 +33,7 @@
 
             <!-- Pre-Filter -->
             <div class="filter-section" id="preFilter">
-                <div class="filter-label">Pre-Filter</div>
+                <div class="filter-label">1. Pre-Filter</div>
                 <div class="filter-box">
                     <div class="filter-mesh"></div>
                     <div class="particle-container" id="preFilterParticles"></div>
@@ -47,7 +47,7 @@
 
             <!-- HEPA Filter -->
             <div class="filter-section" id="hepaFilter">
-                <div class="filter-label">HEPA Filter</div>
+                <div class="filter-label">2. HEPA Filter</div>
                 <div class="filter-box">
                     <div class="filter-mesh hepa-mesh"></div>
                     <div class="particle-container" id="hepaFilterParticles"></div>
@@ -61,7 +61,7 @@
 
             <!-- Carbon Filter -->
             <div class="filter-section" id="carbonFilter">
-                <div class="filter-label">Activated Carbon</div>
+                <div class="filter-label">3. Activated Carbon</div>
                 <div class="filter-box">
                     <div class="filter-mesh carbon-mesh"></div>
                     <div class="particle-container" id="carbonFilterParticles"></div>
@@ -75,7 +75,7 @@
 
             <!-- UV Light -->
             <div class="filter-section" id="uvFilter">
-                <div class="filter-label">UV-C Light</div>
+                <div class="filter-label">4. UV-C Light</div>
                 <div class="filter-box">
                     <div class="uv-light" id="uvLight"></div>
                     <div class="particle-container" id="uvFilterParticles"></div>
@@ -133,6 +133,35 @@
                 </div>
             </div>
         </div>
+
+        <section class="physics-principles" aria-labelledby="physics-title">
+            <h2 id="physics-title">Physics Principles Behind the Air Purifier</h2>
+            <p class="physics-intro">
+                Each stage of the purifier relies on well-established physics concepts to remove different types of pollutants. Explore how the science adds up to cleaner, safer air.
+            </p>
+            <div class="principles-grid">
+                <article class="principle-card">
+                    <h3>I. Mechanical Filtration</h3>
+                    <p>The pre-filter and HEPA filter work like fine nets, catching dust and tiny particles as air passes through.</p>
+                </article>
+                <article class="principle-card">
+                    <h3>II. Brownian Motion</h3>
+                    <p>Tiny particles move randomly and collide with the HEPA fibers, causing them to stick and get trapped in the filter.</p>
+                </article>
+                <article class="principle-card">
+                    <h3>III. Adsorption</h3>
+                    <p>Activated carbon has countless pores that attract VOC molecules and hold them in place, removing gases and smells.</p>
+                </article>
+                <article class="principle-card">
+                    <h3>IV. UV-C Light</h3>
+                    <p>It emits short-wavelength (~254nm) UV light, which damages the DNA and RNA of germs, stopping bacteria, viruses, and mold from growing and spreading.”</p>
+                </article>
+                <article class="principle-card">
+                    <h3>V. Airflow Dynamics</h3>
+                    <p>Smooth ducts and steady fans move air evenly so each filter can work well.</p>
+                </article>
+            </div>
+        </section>
     </div>
 
     <script src="simulation.js"></script>

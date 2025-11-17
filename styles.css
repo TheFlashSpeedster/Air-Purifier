@@ -556,6 +556,66 @@ header h1 {
     line-height: 1.4;
 }
 
+.physics-principles {
+    margin-top: 40px;
+    padding: 30px;
+    background: rgba(15, 15, 30, 0.9);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.physics-principles h2 {
+    color: cyan;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+    text-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.physics-intro {
+    text-align: center;
+    color: #c0c0c0;
+    margin-bottom: 25px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.principles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.principle-card {
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    border: 1px solid rgba(102, 126, 234, 0.2);
+    padding: 20px;
+    box-shadow: inset 0 0 20px rgba(102, 126, 234, 0.1);
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.principle-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(102, 126, 234, 0.5);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.2);
+}
+
+.principle-card h3 {
+    color: greenyellow;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.principle-card p {
+    color: #d0d0d0;
+    line-height: 1.4;
+    font-size: 0.9em;
+}
+
 /* Arrow indicators */
 .filter-section::after {
     content: '→';
